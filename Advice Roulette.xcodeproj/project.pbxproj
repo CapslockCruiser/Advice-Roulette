@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		77F5914003270D4E2A96F4A0 /* Pods_Advice_RouletteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49B0D9982669C34649E6C7FF /* Pods_Advice_RouletteTests.framework */; };
 		CB6138CD23AAB4C5007C5253 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6138CC23AAB4C5007C5253 /* AppDelegate.swift */; };
 		CB6138CF23AAB4C5007C5253 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6138CE23AAB4C5007C5253 /* SceneDelegate.swift */; };
 		CB6138D123AAB4C5007C5253 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6138D023AAB4C5007C5253 /* ViewController.swift */; };
@@ -15,6 +16,9 @@
 		CB6138D923AAB4C5007C5253 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB6138D823AAB4C5007C5253 /* Assets.xcassets */; };
 		CB6138DC23AAB4C5007C5253 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB6138DA23AAB4C5007C5253 /* LaunchScreen.storyboard */; };
 		CB6138E723AAB4C5007C5253 /* Advice_RouletteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6138E623AAB4C5007C5253 /* Advice_RouletteTests.swift */; };
+		CB6138F423AAC337007C5253 /* AdviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6138F323AAC337007C5253 /* AdviceManager.swift */; };
+		CBEC7CD823AB23DF002B6AD6 /* AdviceStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEC7CD723AB23DF002B6AD6 /* AdviceStruct.swift */; };
+		ECC21D9F5060B5F2D8CDA0C9 /* Pods_Advice_Roulette.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52271CAE9AB75B61D731C64B /* Pods_Advice_Roulette.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +32,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3082C437A5A0E958EF28AF52 /* Pods-Advice Roulette.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Advice Roulette.debug.xcconfig"; path = "Target Support Files/Pods-Advice Roulette/Pods-Advice Roulette.debug.xcconfig"; sourceTree = "<group>"; };
+		49B0D9982669C34649E6C7FF /* Pods_Advice_RouletteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Advice_RouletteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		500B64548916A3BC21645CFA /* Pods-Advice RouletteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Advice RouletteTests.release.xcconfig"; path = "Target Support Files/Pods-Advice RouletteTests/Pods-Advice RouletteTests.release.xcconfig"; sourceTree = "<group>"; };
+		52271CAE9AB75B61D731C64B /* Pods_Advice_Roulette.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Advice_Roulette.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F5687770403816886BA2342 /* Pods-Advice RouletteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Advice RouletteTests.debug.xcconfig"; path = "Target Support Files/Pods-Advice RouletteTests/Pods-Advice RouletteTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CB6138C923AAB4C5007C5253 /* Advice Roulette.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Advice Roulette.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB6138CC23AAB4C5007C5253 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB6138CE23AAB4C5007C5253 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +49,9 @@
 		CB6138E223AAB4C5007C5253 /* Advice RouletteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Advice RouletteTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB6138E623AAB4C5007C5253 /* Advice_RouletteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advice_RouletteTests.swift; sourceTree = "<group>"; };
 		CB6138E823AAB4C5007C5253 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB6138F323AAC337007C5253 /* AdviceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceManager.swift; sourceTree = "<group>"; };
+		CBEC7CD723AB23DF002B6AD6 /* AdviceStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceStruct.swift; sourceTree = "<group>"; };
+		DC7196FC706588CE0886CAFE /* Pods-Advice Roulette.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Advice Roulette.release.xcconfig"; path = "Target Support Files/Pods-Advice Roulette/Pods-Advice Roulette.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECC21D9F5060B5F2D8CDA0C9 /* Pods_Advice_Roulette.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,18 +67,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77F5914003270D4E2A96F4A0 /* Pods_Advice_RouletteTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E0F3C2860A3ECF979C38E1E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3082C437A5A0E958EF28AF52 /* Pods-Advice Roulette.debug.xcconfig */,
+				DC7196FC706588CE0886CAFE /* Pods-Advice Roulette.release.xcconfig */,
+				5F5687770403816886BA2342 /* Pods-Advice RouletteTests.debug.xcconfig */,
+				500B64548916A3BC21645CFA /* Pods-Advice RouletteTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		31A3637F73143840D5E78347 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				52271CAE9AB75B61D731C64B /* Pods_Advice_Roulette.framework */,
+				49B0D9982669C34649E6C7FF /* Pods_Advice_RouletteTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CB6138C023AAB4C4007C5253 = {
 			isa = PBXGroup;
 			children = (
 				CB6138CB23AAB4C5007C5253 /* Advice Roulette */,
 				CB6138E523AAB4C5007C5253 /* Advice RouletteTests */,
 				CB6138CA23AAB4C5007C5253 /* Products */,
+				1E0F3C2860A3ECF979C38E1E /* Pods */,
+				31A3637F73143840D5E78347 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,6 +117,8 @@
 		CB6138CB23AAB4C5007C5253 /* Advice Roulette */ = {
 			isa = PBXGroup;
 			children = (
+				CB6138F723AADCF3007C5253 /* Models */,
+				CB6138F223AAC327007C5253 /* Helpers */,
 				CB6138CC23AAB4C5007C5253 /* AppDelegate.swift */,
 				CB6138CE23AAB4C5007C5253 /* SceneDelegate.swift */,
 				CB6138D023AAB4C5007C5253 /* ViewController.swift */,
@@ -102,6 +140,22 @@
 			path = "Advice RouletteTests";
 			sourceTree = "<group>";
 		};
+		CB6138F223AAC327007C5253 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CB6138F323AAC337007C5253 /* AdviceManager.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		CB6138F723AADCF3007C5253 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CBEC7CD723AB23DF002B6AD6 /* AdviceStruct.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -109,9 +163,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CB6138EB23AAB4C5007C5253 /* Build configuration list for PBXNativeTarget "Advice Roulette" */;
 			buildPhases = (
+				117927D49F33BCEEEDB09DC4 /* [CP] Check Pods Manifest.lock */,
 				CB6138C523AAB4C5007C5253 /* Sources */,
 				CB6138C623AAB4C5007C5253 /* Frameworks */,
 				CB6138C723AAB4C5007C5253 /* Resources */,
+				2623305E5790D75C6F988784 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,6 +182,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CB6138EE23AAB4C5007C5253 /* Build configuration list for PBXNativeTarget "Advice RouletteTests" */;
 			buildPhases = (
+				AF167BDD0D16C7C95314C233 /* [CP] Check Pods Manifest.lock */,
 				CB6138DE23AAB4C5007C5253 /* Sources */,
 				CB6138DF23AAB4C5007C5253 /* Frameworks */,
 				CB6138E023AAB4C5007C5253 /* Resources */,
@@ -198,13 +255,79 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		117927D49F33BCEEEDB09DC4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Advice Roulette-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2623305E5790D75C6F988784 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Advice Roulette/Pods-Advice Roulette-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Advice Roulette/Pods-Advice Roulette-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Advice Roulette/Pods-Advice Roulette-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AF167BDD0D16C7C95314C233 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Advice RouletteTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CB6138C523AAB4C5007C5253 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBEC7CD823AB23DF002B6AD6 /* AdviceStruct.swift in Sources */,
 				CB6138D123AAB4C5007C5253 /* ViewController.swift in Sources */,
 				CB6138CD23AAB4C5007C5253 /* AppDelegate.swift in Sources */,
+				CB6138F423AAC337007C5253 /* AdviceManager.swift in Sources */,
 				CB6138CF23AAB4C5007C5253 /* SceneDelegate.swift in Sources */,
 				CB6138D723AAB4C5007C5253 /* Advice_Roulette.xcdatamodeld in Sources */,
 			);
@@ -364,6 +487,7 @@
 		};
 		CB6138EC23AAB4C5007C5253 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3082C437A5A0E958EF28AF52 /* Pods-Advice Roulette.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -382,6 +506,7 @@
 		};
 		CB6138ED23AAB4C5007C5253 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC7196FC706588CE0886CAFE /* Pods-Advice Roulette.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -400,6 +525,7 @@
 		};
 		CB6138EF23AAB4C5007C5253 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F5687770403816886BA2342 /* Pods-Advice RouletteTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -422,6 +548,7 @@
 		};
 		CB6138F023AAB4C5007C5253 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 500B64548916A3BC21645CFA /* Pods-Advice RouletteTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

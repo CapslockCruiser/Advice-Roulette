@@ -1,0 +1,13 @@
+Pods/
+
+xcuserdata/
+
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+.build/
+build/
+DerivedData/
+
