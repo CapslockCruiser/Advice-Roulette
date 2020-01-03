@@ -12,13 +12,13 @@ class ViewController: UIViewController {
     
     private var currentAdvice: AdviceStruct? = nil
     
-    @IBOutlet weak var adviceTextField: UITextField!
+    @IBOutlet weak var adviceLabel: UILabel!
     
     @IBAction func getNewButtonPressed(_ sender: Any) {
         let success: (AdviceStruct) -> () = { (currentAdvice) in
             DispatchQueue.main.async {
                 // Do UI updates here
-                self.adviceTextField.text = currentAdvice.content
+                self.adviceLabel.text = currentAdvice.content
             }
         }
         AdviceManager.shared.getRandom(success: success)
@@ -27,9 +27,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        adviceTextField.borderStyle = .none
-        adviceTextField.isUserInteractionEnabled = false
+
         navigationController?.setNavigationBarHidden(true, animated: false)
+        adviceLabel.numberOfLines = 0
+    }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        adviceLabel.numberOfLines = 0
     }
 
     

@@ -16,38 +16,38 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WTs-67-NDz">
-                                <rect key="frame" x="86.5" y="524" width="34" height="30"/>
+                                <rect key="frame" x="86.5" y="509" width="34" height="30"/>
                                 <state key="normal" title="Save"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cj7-Pq-1xi">
-                                <rect key="frame" x="282" y="524" width="57" height="30"/>
+                                <rect key="frame" x="282" y="509" width="57" height="30"/>
                                 <state key="normal" title="Get new"/>
                                 <connections>
                                     <action selector="getNewButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8N1-Uw-uKg"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Hello there! Waiting for a fresh advice to load..." borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RkT-yn-XwZ">
-                                <rect key="frame" x="20" y="458" width="374" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello there! Loading a new advice for you..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nq8-lE-W06">
+                                <rect key="frame" x="41.5" y="449.5" width="331" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="RkT-yn-XwZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="4Vb-M1-CXE"/>
-                            <constraint firstItem="RkT-yn-XwZ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="5o6-s1-kzd"/>
-                            <constraint firstItem="RkT-yn-XwZ" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="BvZ-zv-iLL"/>
+                            <constraint firstItem="nq8-lE-W06" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="BXe-iQ-hsz"/>
                             <constraint firstItem="WTs-67-NDz" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" multiplier="0.5" id="Epp-3L-Zg9"/>
+                            <constraint firstItem="nq8-lE-W06" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.8" id="LmO-oZ-ARj"/>
+                            <constraint firstItem="WTs-67-NDz" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="1.1" constant="1.5" id="UtT-KM-IbK"/>
                             <constraint firstItem="cj7-Pq-1xi" firstAttribute="top" secondItem="WTs-67-NDz" secondAttribute="top" id="aYm-mu-tfO"/>
-                            <constraint firstItem="WTs-67-NDz" firstAttribute="top" secondItem="RkT-yn-XwZ" secondAttribute="bottom" constant="32" id="oiO-GX-xkN"/>
+                            <constraint firstItem="WTs-67-NDz" firstAttribute="top" secondItem="nq8-lE-W06" secondAttribute="bottom" constant="38.5" id="dix-f8-uVR"/>
                             <constraint firstItem="cj7-Pq-1xi" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" multiplier="1.5" id="tnp-xP-cB1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="LHh-h3-0gs"/>
                     <connections>
-                        <outlet property="AdviceTextField" destination="RkT-yn-XwZ" id="DAA-Ff-eov"/>
-                        <outlet property="adviceTextField" destination="RkT-yn-XwZ" id="RCg-g1-GaR"/>
+                        <outlet property="adviceLabel" destination="nq8-lE-W06" id="7Qw-Ie-Sxb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
