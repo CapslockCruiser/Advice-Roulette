@@ -25,6 +25,9 @@ final class SavedAdviceViewController: UIViewController {
         let uiTV = UITableView()
         uiTV.translatesAutoresizingMaskIntoConstraints = false
         uiTV.delegate = self
+        uiTV.estimatedRowHeight = 10
+        uiTV.rowHeight = UITableView.automaticDimension
+        uiTV.register(SavedAdviceTableCell.self, forCellReuseIdentifier: "AdviceTableCell")
         return uiTV
     }()
     
@@ -77,7 +80,11 @@ extension SavedAdviceViewController: UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = SavedAdviceTableCell(advice: savedAdvices[indexPath.row])
+        guard let cell = advicesTableView.dequeueReusableCell(withIdentifier: "AdviceTableCell", for: indexPath) as? SavedAdviceTableCell else {
+            assertionFailure(); return UITableViewCell()
+        }
+        
+        cell.adviceLabel.text = savedAdvices[indexPath.row].content
         
         return cell
     }
@@ -85,21 +92,19 @@ extension SavedAdviceViewController: UITableViewDelegate, UITableViewDataSource 
 }
 
 final class SavedAdviceTableCell: UITableViewCell {
-    private let adviceLabel: UILabel = {
+    let adviceLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         
         return label
     }()
     
-    init(advice: AdviceStruct) {
-        super.init(style: .default, reuseIdentifier: "AdviceTableCell")
-        
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
         contentView.addSubview(adviceLabel)
         NSLayoutConstraint.activate([
             adviceLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor),
             adviceLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 8)])
-        adviceLabel.text = advice.content
     }
     
     required init?(coder: NSCoder) {
