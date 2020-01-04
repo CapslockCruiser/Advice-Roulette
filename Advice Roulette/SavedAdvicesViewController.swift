@@ -27,7 +27,7 @@ final class SavedAdviceViewController: UIViewController {
         uiTV.delegate = self
         uiTV.estimatedRowHeight = 10
         uiTV.rowHeight = UITableView.automaticDimension
-        uiTV.register(SavedAdviceTableCell.self, forCellReuseIdentifier: "AdviceTableCell")
+        uiTV.register(SavedAdviceTableCell.self, forCellReuseIdentifier: cellReuseID)
         return uiTV
     }()
     
@@ -39,6 +39,8 @@ final class SavedAdviceViewController: UIViewController {
             }
         }
     }
+    
+    private let cellReuseID = "AdviceTableCell"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -80,7 +82,7 @@ extension SavedAdviceViewController: UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = advicesTableView.dequeueReusableCell(withIdentifier: "AdviceTableCell", for: indexPath) as? SavedAdviceTableCell else {
+        guard let cell = advicesTableView.dequeueReusableCell(withIdentifier: cellReuseID, for: indexPath) as? SavedAdviceTableCell else {
             assertionFailure(); return UITableViewCell()
         }
         
@@ -89,13 +91,23 @@ extension SavedAdviceViewController: UITableViewDelegate, UITableViewDataSource 
         return cell
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == .delete) {
+            AdviceManager.shared.delete(advice: savedAdvices[indexPath.row])
+            savedAdvices.remove(at: indexPath.row)
+            DispatchQueue.main.async {
+                self.advicesTableView.reloadData()
+            }
+        }
+    }
 }
 
 final class SavedAdviceTableCell: UITableViewCell {
     let adviceLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        
+        label.numberOfLines = 0
+        label.sizeToFit()
         return label
     }()
     
@@ -103,8 +115,12 @@ final class SavedAdviceTableCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         contentView.addSubview(adviceLabel)
         NSLayoutConstraint.activate([
-            adviceLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-            adviceLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 8)])
+//            adviceLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor),
+            adviceLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 8),
+            adviceLabel.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -8),
+            adviceLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: -2),
+            adviceLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 2)
+        ])
     }
     
     required init?(coder: NSCoder) {

@@ -92,6 +92,22 @@ final class AdviceManager {
         adviceToSave.setValue(Date.init(), forKey: "saved_time")
         saveContext()
     }
+    
+    func delete(advice: AdviceStruct) {
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Advice")
+        fetchRequest.predicate = NSPredicate(format: "advice_id == %d", advice.id)
+        
+        var result: [NSManagedObject] = []
+        
+        do {
+            result = try mOC.fetch(fetchRequest)
+            mOC.delete(result[0])
+            saveContext()
+        } catch {
+            print("Couldn't fetch request")
+        }
+        
+    }
 
     private func saveContext() {
         do {
