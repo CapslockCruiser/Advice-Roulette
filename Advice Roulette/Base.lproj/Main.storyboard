@@ -18,6 +18,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WTs-67-NDz">
                                 <rect key="frame" x="86.5" y="509" width="34" height="30"/>
                                 <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dNg-v7-x1x"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cj7-Pq-1xi">
                                 <rect key="frame" x="282" y="509" width="57" height="30"/>
@@ -32,12 +35,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ACu-na-m2Z">
+                                <rect key="frame" x="168" y="697.5" width="78" height="30"/>
+                                <state key="normal" title="View saved"/>
+                                <connections>
+                                    <action selector="viewSavedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kd3-gb-Teh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="nq8-lE-W06" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="BXe-iQ-hsz"/>
                             <constraint firstItem="WTs-67-NDz" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" multiplier="0.5" id="Epp-3L-Zg9"/>
                             <constraint firstItem="nq8-lE-W06" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.8" id="LmO-oZ-ARj"/>
+                            <constraint firstItem="ACu-na-m2Z" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="O7J-o0-Yr9"/>
+                            <constraint firstItem="ACu-na-m2Z" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="1.5" id="Ova-Yx-jT8"/>
                             <constraint firstItem="WTs-67-NDz" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="1.1" constant="1.5" id="UtT-KM-IbK"/>
                             <constraint firstItem="cj7-Pq-1xi" firstAttribute="top" secondItem="WTs-67-NDz" secondAttribute="top" id="aYm-mu-tfO"/>
                             <constraint firstItem="WTs-67-NDz" firstAttribute="top" secondItem="nq8-lE-W06" secondAttribute="bottom" constant="38.5" id="dix-f8-uVR"/>

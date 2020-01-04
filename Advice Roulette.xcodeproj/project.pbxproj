@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		77F5914003270D4E2A96F4A0 /* Pods_Advice_RouletteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49B0D9982669C34649E6C7FF /* Pods_Advice_RouletteTests.framework */; };
+		CB1F5CBB23BF1DE500F7D73A /* SavedAdvicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1F5CBA23BF1DE500F7D73A /* SavedAdvicesViewController.swift */; };
 		CB6138CD23AAB4C5007C5253 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6138CC23AAB4C5007C5253 /* AppDelegate.swift */; };
 		CB6138CF23AAB4C5007C5253 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6138CE23AAB4C5007C5253 /* SceneDelegate.swift */; };
 		CB6138D123AAB4C5007C5253 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6138D023AAB4C5007C5253 /* ViewController.swift */; };
@@ -37,6 +38,7 @@
 		500B64548916A3BC21645CFA /* Pods-Advice RouletteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Advice RouletteTests.release.xcconfig"; path = "Target Support Files/Pods-Advice RouletteTests/Pods-Advice RouletteTests.release.xcconfig"; sourceTree = "<group>"; };
 		52271CAE9AB75B61D731C64B /* Pods_Advice_Roulette.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Advice_Roulette.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F5687770403816886BA2342 /* Pods-Advice RouletteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Advice RouletteTests.debug.xcconfig"; path = "Target Support Files/Pods-Advice RouletteTests/Pods-Advice RouletteTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CB1F5CBA23BF1DE500F7D73A /* SavedAdvicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedAdvicesViewController.swift; sourceTree = "<group>"; };
 		CB6138C923AAB4C5007C5253 /* Advice Roulette.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Advice Roulette.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB6138CC23AAB4C5007C5253 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB6138CE23AAB4C5007C5253 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				CB6138DA23AAB4C5007C5253 /* LaunchScreen.storyboard */,
 				CB6138DD23AAB4C5007C5253 /* Info.plist */,
 				CB6138D523AAB4C5007C5253 /* Advice_Roulette.xcdatamodeld */,
+				CB1F5CBA23BF1DE500F7D73A /* SavedAdvicesViewController.swift */,
 			);
 			path = "Advice Roulette";
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 			files = (
 				CBEC7CD823AB23DF002B6AD6 /* AdviceStruct.swift in Sources */,
 				CB6138D123AAB4C5007C5253 /* ViewController.swift in Sources */,
+				CB1F5CBB23BF1DE500F7D73A /* SavedAdvicesViewController.swift in Sources */,
 				CB6138CD23AAB4C5007C5253 /* AppDelegate.swift in Sources */,
 				CB6138F423AAC337007C5253 /* AdviceManager.swift in Sources */,
 				CB6138CF23AAB4C5007C5253 /* SceneDelegate.swift in Sources */,

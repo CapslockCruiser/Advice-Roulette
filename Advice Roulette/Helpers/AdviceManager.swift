@@ -50,17 +50,48 @@ final class AdviceManager {
                 return
             }
             
-            
-            
-            
-            
             success(newAdvice!) // Force unwrappnig for now
         }.resume()
         
     }
     
-    func save(advice: Advice) {
+    func loadAllSaved() -> [AdviceStruct] {
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Advice")
         
+        var advices: [AdviceStruct] = []
+        
+        do {
+            let sortDescriptor = NSSortDescriptor(key: "saved_time", ascending: true)
+            fetchRequest.sortDescriptors?.append(sortDescriptor)
+            let fetchedResults = try mOC.fetch(fetchRequest)
+            for advice in fetchedResults {
+                let id = advice.value(forKey: "advice_id") as! Int
+                let content = advice.value(forKey: "advice_content") as! String
+                let modifieddate = advice.value(forKey: "saved_time") as! Date
+                let adviceStruct = AdviceStruct(id: id, content: content, modifieddate: modifieddate)
+                advices.append(adviceStruct)
+            }
+        } catch {
+            print("Couldn't fetch results")
+        }
+        
+        
+        return advices
+    }
+    
+    func save(advice: AdviceStruct) {
+        
+        if (adviceExists(id: advice.id)) {
+            return
+        }
+        
+        let entity = NSEntityDescription.entity(forEntityName: "Advice", in: mOC)
+        guard let ent = entity else { assertionFailure(); return }
+        let adviceToSave = NSManagedObject(entity: ent, insertInto: mOC)
+        adviceToSave.setValue(advice.id, forKey: "advice_id")
+        adviceToSave.setValue(advice.content, forKey: "advice_content")
+        adviceToSave.setValue(Date.init(), forKey: "saved_time")
+        saveContext()
     }
 
     private func saveContext() {
@@ -68,6 +99,25 @@ final class AdviceManager {
             try mOC.save()
         } catch {
             print("Could not save context")
+        }
+    }
+    
+    private func adviceExists(id: Int) -> Bool {
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Advice")
+        fetchRequest.predicate = NSPredicate(format: "advice_id == %d", id)
+        
+        var result: [NSManagedObject] = []
+        
+        do {
+            result = try mOC.fetch(fetchRequest)
+        } catch {
+            print("Couldn't fetch request")
+        }
+        
+        if result.count > 0 {
+            return true
+        } else {
+            return false
         }
     }
     
