@@ -75,7 +75,6 @@ final class AdviceManager {
             print("Couldn't fetch results")
         }
         
-        
         return advices
     }
     

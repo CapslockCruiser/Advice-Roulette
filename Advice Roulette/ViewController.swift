@@ -20,7 +20,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func saveButtonPressed(_ sender: Any) {
-        if (currentAdvice == nil) {
+        if let currAdvice = currentAdvice {
+            AdviceManager.shared.save(advice: currAdvice)
+        } else {
             // TODO: Take care of scenario where current advice has not yet loaded
             let alertController = UIAlertController(title: "Loading", message: "We're still loading an advice!", preferredStyle: .alert)
             let alertAction = UIAlertAction(title: "Okay", style: .default, handler: {action in
@@ -31,6 +33,7 @@ class ViewController: UIViewController {
             self.present(alertController, animated: true, completion: nil)
             return
         }
+        
     }
     
     

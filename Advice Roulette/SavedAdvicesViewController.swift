@@ -29,13 +29,21 @@ final class SavedAdviceViewController: UIViewController {
     }()
     
     // MARK: Private properties
-    private var savedAdvices: [AdviceStruct] = [];
+    private var savedAdvices: [AdviceStruct] = [] {
+        didSet {
+            DispatchQueue.main.async {
+                self.advicesTableView.reloadData()
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.white
         addUIElements()
         savedAdvices = AdviceManager.shared.loadAllSaved()
+        advicesTableView.delegate = self
+        advicesTableView.dataSource = self
     }
     
     @objc private func exitViewController() {
@@ -63,6 +71,38 @@ final class SavedAdviceViewController: UIViewController {
     }
 }
 
-extension SavedAdviceViewController: UITableViewDelegate {
+extension SavedAdviceViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return savedAdvices.count
+    }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = SavedAdviceTableCell(advice: savedAdvices[indexPath.row])
+        
+        return cell
+    }
+    
+}
+
+final class SavedAdviceTableCell: UITableViewCell {
+    private let adviceLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        
+        return label
+    }()
+    
+    init(advice: AdviceStruct) {
+        super.init(style: .default, reuseIdentifier: "AdviceTableCell")
+        
+        contentView.addSubview(adviceLabel)
+        NSLayoutConstraint.activate([
+            adviceLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor),
+            adviceLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 8)])
+        adviceLabel.text = advice.content
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 }
